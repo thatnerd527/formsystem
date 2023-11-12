@@ -790,7 +790,7 @@
               Authorize this app
               <div style="margin-top: 10px;">
                 <md-filled-tonal-button
-                  @click=${()=>{window.location.href=`https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/spreadsheets&include_granted_scopes=true&response_type=token&state=null&redirect_uri=${window.location.origin}&client_id=11720761169-cdg8r8l25u49ehjfss6761snebeud9en.apps.googleusercontent.com`}}
+                  @click=${()=>{window.location.href=`https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/spreadsheets&include_granted_scopes=true&response_type=token&state=null&redirect_uri=${window.location.href.split("?")[0]}&client_id=11720761169-cdg8r8l25u49ehjfss6761snebeud9en.apps.googleusercontent.com`}}
                   >Authenticate</md-filled-tonal-button
                 >
               </div>
