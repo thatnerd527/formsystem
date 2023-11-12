@@ -851,7 +851,7 @@
           </div> -->
         </div>
       </div>
-    `}connectedCallback(){super.connectedCallback(),(async()=>{let i=localStorage.getItem("oauth2token");if(i==null)this.accesstoken="",this.verifying=!1;else{let t=await(await fetch(`https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${i}`)).json();t.error!=null?(this.accesstoken="",this.verifying=!1):(this.accesstoken=i,setTimeout(()=>{this.expired=!0},t.expires_in*1e3),this.verifying=!1)}let e=new URLSearchParams(window.location.href);e.has("access_token")&&(localStorage.setItem("oauth2token",e.get("access_token")),window.location.href=window.location.origin)})()}_oninput(i){let e=i.target;this.idpenilaian=e.value,this.count++}};O.styles=g`
+    `}connectedCallback(){super.connectedCallback(),(async()=>{let i=localStorage.getItem("oauth2token");if(i==null)this.accesstoken="",this.verifying=!1;else{let t=await(await fetch(`https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${i}`)).json();t.error!=null?(this.accesstoken="",this.verifying=!1):(this.accesstoken=i,setTimeout(()=>{this.expired=!0},t.expires_in*1e3),this.verifying=!1)}let e=new URLSearchParams(window.location.href);e.has("access_token")&&(localStorage.setItem("oauth2token",e.get("access_token")),window.location.href=window.location.href.split("?")[0])})()}_oninput(i){let e=i.target;this.idpenilaian=e.value,this.count++}};O.styles=g`
     :host {
       width: 100vw;
       height: 100vh;
